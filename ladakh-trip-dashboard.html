@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ladakh Trip Dashboard (3–10 July)</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f5f7fb}
+header{background:#123;color:#fff;padding:20px;text-align:center}
+nav{position:sticky;top:0;background:#fff;padding:10px;border-bottom:1px solid #ddd}
+nav a{margin:0 10px}
+section{background:#fff;margin:15px;padding:15px;border-radius:10px}
+.card{border:1px solid #ddd;padding:10px;border-radius:8px;margin:10px 0}
+.btn{display:inline-block;padding:8px 12px;background:#2563eb;color:white;text-decoration:none;border-radius:6px}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #ccc;padding:8px}
+.checklist label{display:block;padding:4px}
+</style>
+<script>
+function saveChecks(){
+ document.querySelectorAll('.ck').forEach((c,i)=>localStorage.setItem('ck'+i,c.checked));
+}
+window.onload=()=>{
+ document.querySelectorAll('.ck').forEach((c,i)=>{
+   c.checked=localStorage.getItem('ck'+i)==='true';
+   c.onchange=saveChecks;
+ });
+};
+</script>
+</head>
+<body>
+<header>
+<h1>🏔️ Ladakh Road Trip Dashboard</h1>
+<p>3 July → 10 July | Jispa • Leh • Nubra • Pangong • Manali</p>
+</header>
+
+<nav>
+<a href="#itinerary">Itinerary</a>
+<a href="#fuel">Fuel</a>
+<a href="#hotels">Hotels</a>
+<a href="#emergency">Emergency</a>
+<a href="#packing">Packing</a>
+</nav>
+
+<section id="itinerary">
+<h2>Daily Itinerary</h2>
+
+<div class="card">
+<h3>3 Jul: Dehradun → Jispa</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Dehradun/Jispa">Open Route</a>
+<ul>
+<li><a target="_blank" href="https://maps.google.com/?q=Atal+Tunnel">Atal Tunnel</a></li>
+<li><a target="_blank" href="https://maps.google.com/?q=Sissu+Waterfall">Sissu Waterfall</a></li>
+</ul>
+</div>
+
+<div class="card">
+<h3>4 Jul: Jispa → Leh</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Jispa/Leh">Open Route</a>
+<ul>
+<li>Suraj Tal</li><li>Baralacha La</li><li>More Plains</li><li>Tanglang La</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>5 Jul: Leh Sightseeing</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Shanti+Stupa/Leh+Palace/Hall+of+Fame+Leh/Magnetic+Hill">Open Circuit</a>
+</div>
+
+<div class="card">
+<h3>6 Jul: Leh → Nubra</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Leh/Khardung+La/Hunder">Open Route</a>
+</div>
+
+<div class="card">
+<h3>7 Jul: Nubra → Pangong</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Hunder/Pangong+Lake">Open Route</a>
+</div>
+
+<div class="card">
+<h3>8 Jul: Pangong → Jispa</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Pangong+Lake/Jispa">Open Route</a>
+<p>⚠️ Longest driving day.</p>
+</div>
+
+<div class="card">
+<h3>9 Jul: Jispa → Manali</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Jispa/Manali">Open Route</a>
+</div>
+
+<div class="card">
+<h3>10 Jul: Manali → Dehradun</h3>
+<a class="btn" target="_blank" href="https://www.google.com/maps/dir/Manali/Dehradun">Open Route</a>
+</div>
+</section>
+
+<section>
+<h2>Altitude Reference</h2>
+<table>
+<tr><th>Place</th><th>Altitude</th></tr>
+<tr><td>Jispa</td><td>3200m</td></tr>
+<tr><td>Leh</td><td>3500m</td></tr>
+<tr><td>Khardung La</td><td>5359m</td></tr>
+<tr><td>Nubra</td><td>3100m</td></tr>
+<tr><td>Pangong</td><td>4250m</td></tr>
+</table>
+</section>
+
+<section id="fuel">
+<h2>Fuel Planning</h2>
+<ul>
+<li>Fuel up at Tandi before Ladakh.</li>
+<li>Fuel available in Leh.</li>
+<li>Don't rely on small pumps outside major towns.</li>
+<li>Tandi → Leh is the critical stretch.</li>
+</ul>
+</section>
+
+<section id="hotels">
+<h2>Suggested Stays</h2>
+<ul>
+<li>Jispa – riverside camps/hotels</li>
+<li>Leh – central market area</li>
+<li>Hunder (Nubra)</li>
+<li>Spangmik (Pangong)</li>
+<li>Old Manali</li>
+</ul>
+</section>
+
+<section id="emergency">
+<h2>Emergency Checklist</h2>
+<ul>
+<li>Keep offline maps downloaded</li>
+<li>Carry cash</li>
+<li>Save hotel numbers locally</li>
+<li>Monitor AMS symptoms</li>
+</ul>
+</section>
+
+<section id="packing">
+<h2>Packing Checklist</h2>
+<div class="checklist">
+<label><input class="ck" type="checkbox"> Driving License</label>
+<label><input class="ck" type="checkbox"> RC</label>
+<label><input class="ck" type="checkbox"> Insurance</label>
+<label><input class="ck" type="checkbox"> Power Bank</label>
+<label><input class="ck" type="checkbox"> Sunglasses</label>
+<label><input class="ck" type="checkbox"> Warm Jacket</label>
+<label><input class="ck" type="checkbox"> Medicines</label>
+</div>
+</section>
+
+</body>
+</html>
